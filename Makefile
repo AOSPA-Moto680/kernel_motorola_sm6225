@@ -1350,7 +1350,7 @@ headers_install_all:
 PHONY += headers_install
 headers_install: __headers
 	$(if $(wildcard $(srctree)/arch/$(SRCARCH)/include/uapi/asm/Kbuild),, \
-	  $(error Headers not exportable for the $(SRCARCH) architecture))
+	$(error Headers not exportable for the $(SRCARCH) architecture))
 	$(Q)$(MAKE) $(hdr-inst)=include/uapi dst=include
 	$(Q)$(MAKE) $(hdr-inst)=arch/$(SRCARCH)/include/uapi $(hdr-dst)
         $(Q)$(MAKE) $(hdr-inst)=techpack/audio/include/uapi
